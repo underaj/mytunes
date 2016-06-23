@@ -22,16 +22,15 @@ var SongQueue = Backbone.Collection.extend({
 
     this.on('dequeue', function(song) {
       this.remove(song);
-    }, this);
+      // if (this.length > 0) {
+      //   this.playFirst();
+      // }
+    });
+
   },
-
-
-
+  playFirst: function() {
+    this.at(0).play();
+  }
 });
-
-
-SongQueue.prototype.playFirst = function() {
-  this.at(0).play();
-};
 
 

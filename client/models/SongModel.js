@@ -11,7 +11,6 @@ var SongModel = Backbone.Model.extend({
   },
   dequeue: function() {
     // Triggering an event here will also trigger the event on the collection
-    console.log('songModel dequeued');
     this.trigger('dequeue', this);
   },
   ended: function() {
